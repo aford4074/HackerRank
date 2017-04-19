@@ -2,19 +2,13 @@ from collections import defaultdict
 
 n, m = map(int, input().split(' '))
 
-a_words = defaultdict(list)
+words = defaultdict(list)
 
-for i in range(1, n + 1):
-    word = input()
+for i, word in [(i, input()) for i in range(1, n + 1)]:
+    words[word].append(i)
 
-    a_words[word].append(i)
-
-for j in range(m):
-    word = input()
-
-    indexes = a_words[word]
-
-    if not len(indexes):
-        print('-1')
+for word in [input() for _ in range(m)]:
+    if word in words:
+        print(' '.join(map(str, words[word])))
     else:
-        print(' '.join(map(str, indexes)))
+        print('-1')
