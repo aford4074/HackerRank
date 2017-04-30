@@ -10,6 +10,8 @@ Sample Input
 Sample Output
 
 [-10.  -8.   4.   3.   2.   1.]
+
+python 2.7
 '''
 
 import numpy as np
