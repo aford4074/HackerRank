@@ -33,8 +33,8 @@ def hackerrank(a1, a2):
 
 n, m = map(int, raw_input().split(' '))
 
-l1 = [[r for r in raw_input().split(' ')[:m]] for _ in xrange(n)]
-l2 = [[r for r in raw_input().split(' ')[:m]] for _ in xrange(n)]
+l1 = [raw_input().split(' ')[:m] for _ in xrange(n)]
+l2 = [raw_input().split(' ')[:m] for _ in xrange(n)]
 
 a1 = np.array(l1, dtype = np.int)
 a2 = np.array(l2, dtype = np.int)

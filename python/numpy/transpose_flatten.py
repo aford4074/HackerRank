@@ -27,6 +27,6 @@ def hackerrank(l):
     print a.flatten()
 
 n, m = map(int, raw_input().split(' '))
-l = [[row for row in map(int, raw_input().split(' '))] for rows in xrange(n)]
+l = [map(int, raw_input().split(' ')) for _ in xrange(n)]
 
 hackerrank(l)
